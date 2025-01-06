@@ -1,0 +1,241 @@
+
+.p_page_content{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding-top: 10vh;
+  background-color: transparent;
+  margin-top: 0;
+}
+@media (max-width: 768px) {
+  .p_page_content{
+    padding-top: 14vh;
+  }
+}
+
+.p_sub_page_content{
+  flex:1;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap:3vh;
+  overflow: hidden;
+  margin-top: 6vh;
+}
+
+.p_page_content > :first-child{
+  margin-top: 0vh;
+}
+
+.p_logo{
+  height: 4vh;
+  width: auto;
+  padding-top: 1vh;
+}
+
+.p_logo path{
+  stroke: #ffa400;
+  fill: #ffa400;
+  stroke-width: 0px;
+}
+
+
+.p_title{
+  padding: 0;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: end;
+}
+.p_sub_page_content h1{
+  font-family:'EB';
+  font-size: clamp(16px, 2.5vh + 2px, 21px) !important;
+  padding: 0 20% 0 20%;
+  line-height: 0;
+  font-weight:lighter;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .p_sub_page_content h1{
+    font-size: 20px !important; 
+  }
+}
+.p_sub_page_content p{
+  padding: 0 20% 0 20%;
+  font-family:'EB';
+  font-size: clamp(15px, 2.2vh + 2px, 18px) !important;
+  text-align: center;
+  margin: 0 0 3px 0;
+  font-weight: 1;
+  letter-spacing: .02em;
+}
+@media (max-width: 768px) {
+  .p_sub_page_content p{
+    padding: 0 10% 0 10%;
+    font-size: 17px !important; 
+  }
+}
+
+.specifications {
+  justify-content: end;
+  align-items: end;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+
+}
+
+.specifications div{
+  flex: 1;
+  width: 100%;
+  height: auto;
+}
+
+.specifications h3{
+  padding: 0 20% 0 20%;
+  text-align: center;
+  font-family: "EB";
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .specifications h3{
+    padding: 0 10% 0 10%;
+  }
+}
+
+h4{
+  padding-top: 3px;
+  text-align: center;
+  font-family: "EB";
+  margin: 0;
+  font-size: 14px !important;
+  font-weight: 1;
+  margin: 0;
+  color: rgb(71, 71, 71);
+  font-style: italic;
+}
+
+.p_sub_page_content img{
+  height: auto;
+  width: 47vw;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .p_sub_page_content img{
+    height: auto;
+    width: 100vw !important;
+  }
+}
+
+#sketch{
+  height: 35vh;
+  width: auto;
+  margin: 2vh 0 2vh 0;
+}
+@media (max-width: 768px) {
+  #sketch{
+    height: auto;
+    width: 60vw !important;
+  }
+}
+
+
+#gallery1{
+  margin-top: 1vh;
+  height: 79vh;
+  width: auto;
+}
+@media (max-width: 768px) {
+  #gallery1{
+    height: 60vh;
+    width: auto;
+  }
+}
+
+#oreno1{
+  margin-top: 1vh;
+  height: 79vh;
+  width: auto;
+}
+@media (max-width: 768px){
+  #oreno1{
+    height: auto;
+    width: 100vw;
+    object-fit: contain;
+  }
+  #pangyo2{
+    width: 170vw !important;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+#reichl{
+  height: 20vh;
+  object-fit: contain;
+}
+
+#kral{
+  width: 45vw;
+  object-fit: contain;
+  
+}
+
+#armchair{
+  width: 20vw;
+  object-fit: contain;
+}
+
+
+.p_button {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  color: #4e4e4e;
+  cursor: pointer;
+  transition: border 0.3s ease, color 0.3s ease;
+  height: 2vh;
+  width: auto; /* Set line-height to match height for vertical centering */
+  text-align: center; /* Center text horizontally */
+  margin-bottom: 30px;
+  line-height: 0.8;
+}
+
+.p_button_img{
+  height: 70%;
+  width: auto;
+  align-self: center;
+  justify-self: center;
+  padding: 0 0 0 0.3%;
+}
+
+.p_button_img img{
+height: 100%;
+width: auto;
+display: flex;
+}
+
+
+.p_button a {
+  font-family:'EB';
+  color: inherit; /* Inherit color from the parent to apply hover effect */
+  text-decoration: none;
+  font-size: 17px;
+  align-self: center;
+  text-decoration: underline;
+}
+
+.p_button:hover {
+ filter: opacity(80%);
+}
+

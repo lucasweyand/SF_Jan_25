@@ -1,0 +1,371 @@
+/*WHOLE PAGE CSS WHOLE PAGE CSS*/
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+    transform: scale(.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scrollHint{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: 'geistRegular'; /* Choose a name for your font */
+  src: url('Fonts/GeistMono-Regular.otf') format('truetype'); /* List different formats for broader browser support */
+  font-weight: normal; /* You can specify different weights if needed */
+  font-style: normal; /* You can specify different styles if needed */
+}
+
+@font-face{
+  font-family: 'geistThin';
+  src: url('Fonts/GEISTMONO-THIN.OTF') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+
+header{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  /*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);*/
+}
+/* LOGO LOGO LOGO*/
+.logo-container{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+
+.logo{
+  height: 4vh;
+  padding-top: 2vh;
+}
+
+
+
+.menu-container img.menu {
+  height: 2.5vh;
+  padding-top: 2.7vh;
+  position: fixed;
+  z-index: 999;
+  right: 2.5vw;
+  opacity: 0;
+  animation: fadeIn 3s forwards;
+  filter: invert(0%);
+  transition: filter 0.3s ease;
+}
+.menu-container img.menu.scrolled {
+  filter: invert(75%);
+}
+.menu-container img.menu:hover {
+  filter: invert(100%);
+}
+
+/* ScrollHint*/
+
+
+.vertical-line{
+  display: flex;
+  position: absolute;
+  background-color: white;
+  z-index: 500;
+  width: 1.2px;
+  height: 100px;
+  bottom: 2vh;
+  left: 49.8vw;
+  animation: scrollHint 3s cubic-bezier(0,.08,1,-0.28);
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+
+
+/* START NAV START NAV START NAV*/
+.nav{
+  position: fixed;
+  z-index: 1300;
+  top: 0;
+  right: -14vw;
+  height: 100vh;
+  width: 14vw;
+  background-color: rgba(227, 226, 247, 0.25);
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding-top: 1vh;
+  transition: right 0.3s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.nav.open{
+  right: 0;
+}
+
+@media (max-width: 425px){
+  .nav{
+    right: -100vw;
+    width: 100vw;
+  }
+ 
+} 
+.nav img{
+  height: 2vh;
+  position: absolute;
+  right: 0;
+  align-items: top;
+  margin-top: 1.6vh;
+  margin-right: 2.5vw;
+  filter: invert(30%);
+  transition: filter 0.3s ease;
+}
+
+.nav img:hover{
+  filter: invert(65%);
+}
+
+.dropdown{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-content{
+  list-style-type: none;
+  display: none;
+  margin:0;
+  padding-left: 1rem;
+}
+
+.dropdown-content a{
+  color: #1a4e6e !important;
+  font-size: 0.8vw !important;
+  line-height: 1.7rem;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  color: #b1c0c9 !important;
+}
+
+
+
+.nav-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 1vw;
+  padding-top: 4rem;
+  list-style-type: none;
+}
+
+.nav .item-preview{
+  display: flex;
+  width: 13vw;
+  height: auto;
+  overflow: hidden;
+}
+
+.item-preview img{
+  position: absolute;
+  left: .8vw;
+  opacity: 0;
+  width: 13vw;
+  height: auto;
+  transition: opacity 1s ease;
+}
+
+
+.nav a{
+  color: #00426b;
+  font-family: 'geistRegular';
+  text-decoration: none;
+  font-size: 1vw;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nav a:hover{
+  color: #b1c0c9;
+}
+
+.toggleSymbol{
+  margin-left: 3px;
+}
+
+
+
+ 
+/* HERO IMAGE HERO IMAGE*/
+
+.hero{
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.hero img{
+  width: 100%;
+  height: auto;
+  margin-top: -15%;
+  position: relative;
+  opacity: 0;
+  object-fit: fill;
+  transform: scale(1.02);
+}
+
+@media (max-width: 425px) {
+  .hero img{
+    margin-top: 0rem;
+  }
+}
+
+.hero img.loaded{
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 1.2s ease-in, opacity 1.2s ease-in;
+}
+
+
+/*Section 1*/
+
+
+section{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 3vh;
+  gap: 5rem;
+  padding-bottom: 4vh;
+  box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+h3{
+  color: #00426b;
+  font-family: 'geistThin';
+  font-size: 2vw;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  padding-top: 3%;
+}
+
+.principles-description h4{
+  display: block;
+  color: #00426b;
+  font-family: 'geistRegular';
+  font-weight:lighter;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0 0 5px 0;
+  align-self: flex-end;
+}
+
+.principles-description p{
+  color: #00426b;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+
+.principles{
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  width: 80vw;
+  overflow: hidden;
+  justify-content: center;
+  gap: 15px;
+}
+
+
+.principles-image{
+  display: flex;
+  justify-content: center;
+  flex: 2.3;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.principles-image img{
+  display: block;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  justify-self: bottom;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.principles-image img.fade-in{
+  opacity: 1;
+}
+
+.principles-description{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  word-wrap: normal;
+  width: 100%;
+}
+
+
+/* FOOTER FOOTER */
+footer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  height: 10vh;
+  background-color: #c5c3ce;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 3vh;
+}
+
+footer p{
+  color: white;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-family: 'geistThin';
+  font-weight: 100;
+  font-size: 100%;
+}
+

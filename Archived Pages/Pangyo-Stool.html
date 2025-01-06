@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pareukoChair/pc.css">
+  <link rel="stylesheet" href="general.css">
+  <title>Studio Fritz | Pangyo Stool</title>
+  <style>
+        .pc_header{
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      height: 7.5vh;
+      width: 100%;
+      background-color:rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(20px);
+      box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .pc_logo-container{
+      display: flex;
+      width: 100vw;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 50;
+    }
+
+
+    .pc_logo{
+      height: 4vh;
+      padding-top: 2vh;
+      padding-bottom: 1vh;
+    }
+      .pc_menu-container img.pc_menu {
+      height: 3.5vh;
+      padding-top: 2.4vh;
+      position: fixed;
+      z-index: 2000;
+      right: 2.5vw;
+      filter: opacity(50%);
+      transition: filter 0.3s ease;
+    }
+
+    .pc_menu-container img.pc_menu:hover {
+      filter: opacity(70%);
+    } 
+  </style> <!-- HEADER IS STYLED HERE-->
+</head>
+<body>
+  <header class="pc_header">
+    <div class="pc_menu-container">
+      <img 
+        class="pc_menu" 
+        src="Vecotors/hamburger.svg" 
+        id="hamburger" 
+      >
+    </div>
+
+    <div class="pc_logo-container">
+        <a href="Home.html"><img class="pc_logo" src="Vecotors/logo3purple.svg" alt="Logo"></a>
+    </div>
+  </header>
+
+  <div class="nav">
+    <img src="Vecotors/close.svg" id="close">
+      <div class="nav-container">
+      <div><a href="Home.html">Home</a></div>
+          <li class="dropdown">
+            <a id="togglePlus">Furniture<span class="toggleSymbol">+</span></a>
+              <ul class="dropdown-content">
+                <li id="pareukoChair"><a href="Pareuko-Chair.html">Pareuko Chair</a></li>
+                <li id="pangyo"><a href="Pangyo-Stool.html">Pangyo Stools</a></li>
+                <li id="Oreno"><a href="Oreno-Table.html">Oreno Coffee Table</a><li>
+              </ul>
+          </li> 
+        <div><a href="Process.html">Process</a></div>
+        <div><a>Story</a></div>
+        <div><a>Contact</a></div>
+      </div>
+    <div class="item-preview">
+      <img src="Images/Pareuko-Sketch.png" id="sketch_1">
+      <img src="Images/Stools-Sketch.png" id="sketch_3">
+      <img src="Images/Oreno-Coffee-Table.png" id="sketch_4">
+    </div>
+  </div>
+  <div class="pc_content">
+    <div class="pc_matte pc_matte-left"><button class="pc_arrow pc_left-arrow" onclick="prevImage()">&#10094;</button></div>
+    <div class="pc_image-viewer">
+        
+        <div class="pc_image-container">
+            <img id="image" src="image1.jpg" alt="Image Viewer">
+        </div> 
+    </div>
+    <div class="pc_matte pc_matte-right"><button class="pc_arrow pc_right-arrow" onclick="nextImage()">&#10095;</button></div>
+  </div>
+  <div class="pc_name"><h1>Pangyo Stool</h1></div>
+
+
+
+  <div class="pc_description">
+    <div class="pc_description-text">
+      <p>The Pangyo Stool draws design inspiration from early Japanese and Korean architecture. A subtle curved edge on one side of the seat enhances comfort and provides a distinctive direction to the piece. It is well-suited for use with bar countertops.</p>
+    </div>
+    <div class="pc_specs">
+      <div class="pc_spec-text">
+        <p><span>Construction Notes:</span> Wedged mortise and tenon joinery creates a strong connection between the seat and the base. Hand-scooped seat and profiles, hand-turned legs and spindles. Butterfly keys provide stability to the wood checks. </p>
+        <p><span>Materials:</span> Japanese Zelkova</p>
+        <p><span>Finish: </span> Oil and Wax</p>
+        <p><span>Dimensions:</span> 19"L x 9"W x 28"H</p>
+        <p><span>Design:</span> Studio Fritz, 2023</p>
+      </div>
+      <div class="pc_button-wrapper">
+        <div class="pc_button"><a>Inquire</a></div>
+        <div class="pc_button"><a>Explore More</a></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Studio Fritz | All Rights Reserved | Seattle, Wa</p>
+    <p>contact@studiofritz.co | 206.452.9298</p>
+  </footer>
+   
+
+
+
+  
+
+  
+
+  
+<script src="general.js"></script>
+<script src="Pango-Stool/pangyoStool.js" defer></script>    
+</body>
+</html>

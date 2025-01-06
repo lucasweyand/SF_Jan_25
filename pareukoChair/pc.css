@@ -1,0 +1,241 @@
+@font-face{
+  font-family: 'geistThin';
+  src: url('Fonts/GEISTMONO-THIN.OTF') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@keyframes pc_fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+/*CONTENT 1 CONTENT 1 CONTENT 1*/
+
+.pc_content{
+  display: flex;
+  flex-direction: row;
+  margin-top: 7.5vh;
+  animation: pc_fadeIn 4s forwards;
+}
+
+.pc_matte{
+  flex:1;
+  height: 86.5vh;
+  background-color:rgba(251, 251, 251, 1);
+  z-index: 300;
+}
+
+.pc_matte-left{
+  box-shadow: 4px -10px 4px rgba(0, 0, 0, 0.03);
+}
+
+.pc_matte-right{
+  box-shadow: -4px -10px 4px rgba(0, 0, 0, 0.03);
+}
+/*image VIEWER VIEWER VIEWER*/
+
+.pc_image-viewer {
+  position: relative;
+  width: 80%;
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  margin: 0 auto
+}
+
+@media (max-width: 1400px) {
+  .pc_image-viewer {
+     max-width: 800px;
+  }
+}
+
+.pc_image-container {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Fixed height for consistency */
+  text-align: center;
+  overflow: hidden; /* Hide overflow to maintain aspect ratio */
+}
+
+@media (max-width: 1400px) {
+  .pc_image-container {
+      height: 100%;
+      font-size: 18px;
+  }
+}
+
+.pc_image-container::before {
+  content: "";
+  display: block;
+  height: 100%;
+  background: #f0f0f0; /* Light grey or a color matching your design */
+}
+
+
+.pc_image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pc_image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the container */
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.pc_image-wrapper img.active {
+  opacity: 1;
+}
+
+.pc_arrow {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 80px;
+  background: rgba(211, 211, 211, 0.0);
+  color: rgb(124, 124, 124);
+  border: none;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.pc_left-arrow {
+  left: 100px;
+}
+
+.pc_right-arrow {
+  right: 100px;
+}
+
+@media (max-width: 600px) {
+  .pc_arrow {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+  }
+}
+
+
+/*NAME SECTION*/
+.pc_name{
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  height: 6vh;
+  align-items: center;
+  animation: pc_fadeIn 4s forwards;
+  box-shadow: 0px -3px 6px -2px rgba(0, 0, 0, 0.05);
+  color: rgb(55, 55, 55)
+}
+.pc_name h1{
+  font-family: 'geistThin';
+  padding-left: 1%;
+  margin: 0;
+  font-size: 1.8vw;
+}
+
+/*SPECIFICATION SECTION*/
+.pc_description{
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  animation: pc_fadeIn 4s forwards;
+}
+
+.pc_description-text{
+  flex: 1;
+  width: 85%;
+  padding-left: 1%;
+  box-sizing: border-box;
+}
+
+
+
+.pc_description p{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: .7rem;
+  font-weight: 500;
+  font-size: 95%;
+}
+.pc_description p span {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 95%;
+}
+
+
+.pc_specs{
+  display: flex;
+  flex: 5;
+  width: 100%;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 1%;
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(to right, lightgrey, transparent);
+  border-image-slice: 1 0 0 0; /* Apply the border image only to the top */
+}
+
+
+.pc_spec-text{
+  flex: 3;
+}
+
+.pc_button-wrapper{
+  flex: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10vw;
+  align-items: center;
+}
+
+.pc_button {
+  color: #c4c4c4;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  border: 1px solid #988aca8c; 
+  cursor: pointer;
+  transition: border 0.3s ease, color 0.3s ease;
+  height: 5vh;
+  line-height: 5vh;
+  width: 8vw; /* Set line-height to match height for vertical centering */
+  text-align: center; /* Center text horizontally */
+}
+
+.pc_button a {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0;
+  color: inherit; /* Inherit color from the parent to apply hover effect */
+  text-decoration: none;
+  font-size: 80%; /* Remove underline from link */
+}
+
+.pc_button:hover {
+  border: 1px solid #988aca;
+  color: #988aca; 
+}
+

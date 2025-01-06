@@ -1,0 +1,29 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.landingWrapper{
+  background-color: #ffa400;
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#landingSVG{
+  height: 30vh;
+  width: auto;
+}
+
+path {
+  stroke-width: 20px; /* Increase as needed for better visibility */
+}
