@@ -464,6 +464,7 @@ footer div{
   align-items: start;
   position: relative;
   gap: 15vw;
+  margin-bottom: 1.5vh;
 }
 @media (max-width: 768px) {
   .footer_content{
