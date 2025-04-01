@@ -122,7 +122,7 @@ model.position.sub(center); // Centers the model
 
 // Move the model up by adjusting the Y position
 const modelHeight = box.max.y - box.min.y; // Get model height
-model.position.y += modelHeight * 0.40; // Moves it up by half its height
+model.position.y += modelHeight * 0.50; // Moves it up by half its height
 
 
   // Set camera position to ensure the model is visible
