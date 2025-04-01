@@ -115,10 +115,15 @@ loader.load('Page_Process/3d_render.dae', function(collada) {
   });
   scene.add(model);
 
-  // Center the model in the scene
-  const box = new THREE.Box3().setFromObject(model);
-  const center = box.getCenter(new THREE.Vector3());
-  model.position.sub(center); // Center the model
+ // Center the model in the scene
+const box = new THREE.Box3().setFromObject(model);
+const center = box.getCenter(new THREE.Vector3());
+model.position.sub(center); // Centers the model
+
+// Move the model up by adjusting the Y position
+const modelHeight = box.max.y - box.min.y; // Get model height
+model.position.y += modelHeight * 0.40; // Moves it up by half its height
+
 
   // Set camera position to ensure the model is visible
   const size = box.getSize(new THREE.Vector3()).length();
