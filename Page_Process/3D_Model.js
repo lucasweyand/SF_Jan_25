@@ -115,6 +115,15 @@ loader.load('Page_Process/3d_render.dae', function(collada) {
   });
   scene.add(model);
 
+ // Ensure model is added to the scene before calculations
+ scene.add(model);
+
+ model.traverse((child) => {
+   if (child.isMesh) {
+     child.geometry.computeBoundingBox(); // Ensure bounding box is calculated
+   }
+ });
+
  // Center the model in the scene
 const box = new THREE.Box3().setFromObject(model);
 const center = box.getCenter(new THREE.Vector3());
