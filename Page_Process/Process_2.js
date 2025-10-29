@@ -5,7 +5,7 @@ function revealSvgPathsOnScroll() {
   // Get all paths and set up a ScrollTrigger for each path
   const paths = gsap.utils.toArray(".path");
   gsap.set(paths, { opacity: 0 });
-  const scrollContainer = document.querySelector(".pro_sub");
+ const scrollContainer = document.getElementById('scrollla');
   const containerHeight = scrollContainer.scrollHeight;
 
 
@@ -16,7 +16,7 @@ function revealSvgPathsOnScroll() {
     // Create a ScrollTrigger for each path
     ScrollTrigger.create({
       trigger: scrollContainer,
-      start: `top+=${index * staggerDuration * 100} top`, // Adjust start position for staggering
+      start: `top+=${index * staggerDuration * 100}top`, // Adjust start position for staggering
       end: `bottom+=${(index + 1) * staggerDuration * 100} bottom`, // Adjust end position for staggering
       onEnter: () => gsap.set(path, { opacity: 1 }),
       onLeaveBack: () => gsap.set(path, { opacity: 0 }),
