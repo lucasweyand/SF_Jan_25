@@ -1,12 +1,12 @@
 .a_content{
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: auto;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 3vw;
-  
+  margin: 12vw 0 12vw 0;
 }
 @media (max-width: 768px) {
   .a_content{
@@ -23,23 +23,24 @@
 }
 
 .a_card{
-  width: 18vw;
+  width: 26vw;
   height: 27vw;
   border: solid 1px rgba(0, 0, 0, 0.39);
   border-radius: 0.5vw;
-  filter: opacity(80%);
+  filter: opacity(90%);
   transition: filter .3s ease;
-  padding: 3%;
+  padding: 0%;
   display: flex; 
   justify-content: center; 
   align-items: center; 
+  padding: 0 !important;
 }
 @media (max-width: 768px) {
   .a_card{
     display: flex;
     flex-direction: column;
     height: 45vh;
-    width: 75vw !important;
+    width: 87vw !important;
     border-radius: 15px;
     padding: 0;
   }
@@ -50,30 +51,37 @@
 }
 
 .a_card img{
-  width: 90%;
-  height: auto;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
   overflow: hidden;
 }
 @media (max-width: 768px) {
   .a_card img{
-    padding-bottom: 5vh;
-    justify-self: center;
+    width: auto;
+   height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  }
+
+  .a_card{
+    filter: none;
   }
 }
 
-#a_Pareuko{width: 80%;}
-#a_Pangyo{width: 80%;}
-#a_Oreno{width: 100%}
+#a_Pareuko{height: 100%;}
+#a_Pangyo{width: 100%;}
+#a_Oreno{width: 100%; display: block;}
 @media (max-width: 768px){
-  #a_Pareuko{width: 65%;}
-  #a_Pangyo{width: 65%;}
-  #a_Oreno{width: 90%}
+  #a_Pareuko{width: 100%;}
+  #a_Pangyo{width: 100%;}
+  #a_Oreno{width: 100%}
 }
 
 
 .a_card h1{
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
   align-self: center;
   font-family: 'EB';
   font-weight: lighter;
