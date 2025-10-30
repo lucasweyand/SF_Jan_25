@@ -24,7 +24,7 @@
   align-items: center;
   margin-bottom: 5vw;
   gap:1vw;
-  height: 150vw;
+  height: auto;
   }
 
 #CAD{
@@ -111,7 +111,12 @@
 }
 
 #stumpIMG {
-  height: 30vh;
+  height: 9vw;
+  padding-bottom: 2vw;
+}
+
+#Construction{
+  margin-top: 12vh;
 }
 
 
@@ -129,7 +134,30 @@
     height: auto;
     top: 38%;
   }
+
+  #stumpIMG{
+    height: 7vh;
+    margin: 3vh 0 5vh 0;
+  }
+
+  .pro_sub p{
+  padding: 0 10% 0 10%;
+  }
+
+  .pro_images{
+    margin: 2vh 0 2vh 0;
+    height: 30vh;
+  }
+
+  .pro_sub{
+    margin-bottom: 5vh;
+  }
+
+  #craft{
+    margin-top: 4vh;
+  }
 }
+
 
 .path{
   opacity: 0;
