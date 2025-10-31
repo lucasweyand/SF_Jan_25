@@ -27,7 +27,7 @@
   width: 26vw;
   height: 27vw;
   border: solid 1px rgba(0, 0, 0, 0.39);
-  border-radius: 0.5vw;
+  
   filter: opacity(90%);
   transition: filter .3s ease;
   padding: 0%;
@@ -42,7 +42,7 @@
     flex-direction: column;
     height: 45vh;
     width: 87vw !important;
-    border-radius: 15px;
+    
     padding: 0;
   }
 }
@@ -111,6 +111,12 @@
   padding: 15vh 0 0 0; 
 }
 
+.a_header h2{
+
+  padding: 10vw 20% 2vw 20%;
+
+}
+
 .a_header p{
   padding: 5vw 20% 5vw 20%;
   font-family:'EB';
@@ -126,7 +132,7 @@
 .a_header h2{
     font-family:'EB';
   font-size: clamp(16px, 2.5vh + 2px, 21px) !important;
-  padding: 0 20% 0 20%;
+  padding: 2vw 20% 2vw 20%;
   line-height: 0;
   font-weight:lighter;
   margin: 0;
