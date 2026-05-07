@@ -5,19 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault(); // Prevent default form submission
 
         // Gather form data
-        const firstName = document.getElementById('firstName').value;
-        const lastName = document.getElementById('lastName').value;
-        const email = document.getElementById('email').value;
+        const firstName = subscribeForm.querySelector('#firstName').value;
+        const email = subscribeForm.querySelector('#email').value;
 
         const data = {
             firstName: firstName,
-            lastName: lastName,
             email: email
         };
 
         try {
             // Send a POST request to the Google Apps Script
-            const response = await fetch("https://script.google.com/macros/s/AKfycby7IJKxVyTON23G3CIZXHZ2foHrR_rkFqvnWpAdlurJS2CyGOkv-Sw8oVwPbvkPvqCD/exec", {
+            const response = await fetch("https://script.google.com/macros/s/AKfycbyVDcMq4VWsdNMyoYX9DVh2KNPNciJRP4rK76bPxjOSFpDN39vXxEEy9HpvOAu_nkw/exec", {
                 method: "POST",
                 body: new URLSearchParams(data), // Convert data to URLSearchParams
             });
