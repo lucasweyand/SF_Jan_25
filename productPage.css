@@ -191,9 +191,18 @@ h4{
     object-fit: cover;
   }
 
+}
 
-
-
+#westlake1{
+  margin-top: 1vh;
+  height: 79vh;
+  width: auto;
+}
+@media (max-width: 768px) {
+  #westlake1{
+    height: auto;
+    width: 100vw;
+  }
 }
 
 #reichl{
