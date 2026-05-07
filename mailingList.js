@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
 
             const response = await fetch(
-                "https://script.google.com/macros/s/AKfycbyVDcMq4VWsdNMyoYX9DVh2KNPNciJRP4rK76bPxjOSFpDN39vXxEEy9HpvOAu_nkw/exec",
+                "https://script.google.com/macros/s/AKfycby8Bvj8cgh4d9-mP531NAqT9HxI8-_OnOe6_9MRezhmmvKqytlCh_PWdJYCvyXf74Vc/exec",
                 {
                     method: "POST",
                     body: new URLSearchParams(data)
