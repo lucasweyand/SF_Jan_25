@@ -4,13 +4,13 @@
   flex-direction: column;
   width: 100%;
   height: auto;
-  padding-top: 10vh;
+  padding-top: 8vh;
   background-color: transparent;
   margin-top: 0;
 }
 @media (max-width: 768px) {
   .p_page_content{
-    padding-top: 14vh;
+    padding-top: 10vh;
   }
 }
 
@@ -23,9 +23,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  gap:3vh;
+  gap:2vh;
   overflow: hidden;
-  margin-top: 6vh;
+  margin-top: 5vh;
 }
 
 .p_page_content > :first-child{
@@ -169,7 +169,7 @@ h4{
 }
 @media (max-width: 768px) {
   #portrait{
-    height: 60vh;
+    height: 70vh;
     width: auto;
   }
 }
